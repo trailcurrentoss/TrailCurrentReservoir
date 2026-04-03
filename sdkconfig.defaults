@@ -1,0 +1,18 @@
+CONFIG_IDF_TARGET="esp32s3"
+
+# Flash
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+
+# USB CDC for console/debug output
+CONFIG_ESP_CONSOLE_USB_CDC=y
+
+# CPU at 80MHz — sufficient for GPIO polling + 500kbit CAN
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_80=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ=80
+
+# TWAI (CAN) controller
+CONFIG_TWAI_ISR_IN_IRAM=y
+
+# Custom partition table with dual OTA slots
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"

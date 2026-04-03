@@ -1,0 +1,34 @@
+# Build output
+build/
+
+# ESP-IDF managed components (fetched via idf_component.yml)
+managed_components/
+
+# ESP-IDF generated config (rebuild from sdkconfig.defaults)
+sdkconfig
+dependencies.lock
+
+# IDE / editor
+.vscode/
+*.swp
+*.swo
+*~
+
+# AI agent configuration (local only — never commit)
+.claude
+.claude/
+.claude.md
+CLAUDE.md
+CLAUDE.MD
+.cursorrules
+.cursor/
+.github/copilot*
+.aider*
+.continue/
+.codeium/
+.tabnine*
+.sourcery.yaml
+
+# OS junk
+.DS_Store
+Thumbs.db
