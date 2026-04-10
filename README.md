@@ -77,12 +77,33 @@ The firmware uses ESP-IDF with FreeRTOS. Source is in the `main/` directory.
 # Build
 idf.py build
 
-# Flash
+# Flash via USB (development)
 idf.py -p /dev/ttyACM0 flash
 
 # Monitor serial output
 idf.py -p /dev/ttyACM0 monitor
 ```
+
+### Creating a Merged Binary for Release
+
+The standard `idf.py build` produces separate partition files (bootloader, partition table, OTA data, and application). These are fine for flashing over USB with `idf.py flash`, which knows the correct offset for each file.
+
+However, the TrailCurrent web flasher and Headwaters deployment packages expect a single merged binary that can be flashed at offset 0x0. Without this step, the web flasher would write the application binary to the wrong flash offset, resulting in a non-booting device.
+
+After building, run the merge script to combine all partitions into a single flashable binary:
+
+```bash
+idf.py build
+./merge.sh
+```
+
+This overwrites `build/reservoir.bin` with a merged image containing:
+- Bootloader (0x0)
+- Partition table (0x8000)
+- OTA data (0xe000)
+- Application (0x10000)
+
+The merged `build/reservoir.bin` is what should be attached to GitHub releases.
 
 ### Architecture
 
@@ -160,6 +181,8 @@ The device supports over-the-air firmware updates triggered via CAN bus, matchin
 
 **Uploading firmware:**
 
+OTA updates write only the application partition, so use the app-only binary produced by `idf.py build` (before running `merge.sh`). Do not use the merged binary for OTA — it contains the bootloader and partition table which are not written during an OTA update.
+
 ```bash
 # Find device hostname from serial output (e.g., esp32-8A3B4C)
 # After OTA mode is triggered:
@@ -218,6 +241,7 @@ Detailed documentation is available in the [DOCS/](DOCS/) directory:
 │   └── CMakeLists.txt                # Component registration
 ├── partitions.csv                    # Dual OTA partition table
 ├── CMakeLists.txt                    # ESP-IDF root build file
+├── merge.sh                          # Creates merged binary for web flasher / releases
 └── sdkconfig.defaults                # ESP-IDF default configuration
 ```
 
