@@ -64,7 +64,7 @@ The ESP32-S3 GPIO is configured with an internal pull-down resistor. When the se
 | 25% | 12 | Blue |
 | 50% | 13 | Green |
 | 75% | 14 | Yellow |
-| 100% | 17 | Red |
+| 100% | 43 | Red |
 
 ### Power Wiring
 
@@ -191,7 +191,7 @@ If you need to use different GPIOs (due to wiring constraints or a different boa
 static const tank_config_t tanks[NUM_TANKS] = {
     { "fresh", { GPIO_NUM_4,  GPIO_NUM_5,  GPIO_NUM_6,  GPIO_NUM_7  } },
     { "grey",  { GPIO_NUM_8,  GPIO_NUM_9,  GPIO_NUM_10, GPIO_NUM_11 } },
-    { "black", { GPIO_NUM_12, GPIO_NUM_13, GPIO_NUM_14, GPIO_NUM_17 } },
+    { "black", { GPIO_NUM_12, GPIO_NUM_13, GPIO_NUM_14, GPIO_NUM_43 } },
 };
 ```
 

@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr-down" markerWidth="6" markerHeight="8" refX="3" refY="8" orient="auto">
+      <path d="M0,0 L3,8 L6,0 Z" fill="#52a441"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="700" fill="#212529"/>
+
+  <!-- Title bar -->
+  <rect width="1100" height="54" fill="#343a40"/>
+  <rect y="54" width="1100" height="3" fill="#52a441"/>
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#52a441">TrailCurrent Reservoir</text>
+  <text x="260" y="35" font-size="13" fill="#adb5bd">20-Pin Ribbon Cable — Sensor Wiring Reference</text>
+  <text x="1076" y="35" text-anchor="end" font-size="10" fill="#6c757d">IDC 2x10 connector</text>
+
+  <!-- Subtitle -->
+  <text x="550" y="82" text-anchor="middle" font-size="12" fill="#adb5bd">Flat ribbon cable layout — red stripe marks Pin 1 (3.3V / 5V end)</text>
+
+  <!-- =============== RIBBON CABLE VISUALIZATION =============== -->
+  <!-- Cable body background -->
+  <rect x="40" y="100" width="1020" height="210" fill="#2a2a2a" stroke="#444" stroke-width="1" rx="6"/>
+
+  <!-- 20 individual wires, left to right -->
+  <!-- Each wire is a vertical strip: 46px wide, 4px gap -->
+  <!-- x starts at 52, each wire = 50px pitch -->
+
+  <!-- Pin 1: 3.3V — RED STRIPE -->
+  <rect x="52" y="108" width="46" height="194" fill="#c0392b" stroke="#922b21" stroke-width="1" rx="2"/>
+  <text x="75" y="130" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">1</text>
+  <text x="75" y="148" text-anchor="middle" font-size="10" fill="#fff" font-weight="600">3.3V</text>
+  <text x="75" y="165" text-anchor="middle" font-size="9" fill="#ffd5d5">Power</text>
+  <text x="75" y="290" text-anchor="middle" font-size="8" fill="#ffd5d5">RED STRIPE</text>
+
+  <!-- Pin 2: 5V -->
+  <rect x="102" y="108" width="46" height="194" fill="#52a441" stroke="#3d7d31" stroke-width="1" rx="2"/>
+  <text x="125" y="130" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">2</text>
+  <text x="125" y="148" text-anchor="middle" font-size="10" fill="#fff" font-weight="600">5V</text>
+  <text x="125" y="165" text-anchor="middle" font-size="9" fill="#d0e2c7">Power</text>
+
+  <!-- Pin 3: GND -->
+  <rect x="152" y="108" width="46" height="194" fill="#495057" stroke="#343a40" stroke-width="1" rx="2"/>
+  <text x="175" y="130" text-anchor="middle" font-size="12" fill="#dee2e6" font-weight="700">3</text>
+  <text x="175" y="148" text-anchor="middle" font-size="10" fill="#dee2e6" font-weight="600">GND</text>
+  <text x="175" y="165" text-anchor="middle" font-size="9" fill="#adb5bd">Ground</text>
+
+  <!-- Pin 4: GND -->
+  <rect x="202" y="108" width="46" height="194" fill="#495057" stroke="#343a40" stroke-width="1" rx="2"/>
+  <text x="225" y="130" text-anchor="middle" font-size="12" fill="#dee2e6" font-weight="700">4</text>
+  <text x="225" y="148" text-anchor="middle" font-size="10" fill="#dee2e6" font-weight="600">GND</text>
+  <text x="225" y="165" text-anchor="middle" font-size="9" fill="#adb5bd">Ground</text>
+
+  <!-- Pin 5: IO43 — Black 100% -->
+  <rect x="252" y="108" width="46" height="194" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="2"/>
+  <text x="275" y="130" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">5</text>
+  <text x="275" y="148" text-anchor="middle" font-size="10" fill="#fff" font-weight="600">IO43</text>
+  <text x="275" y="165" text-anchor="middle" font-size="9" fill="#ffe5e5">Black</text>
+  <text x="275" y="178" text-anchor="middle" font-size="9" fill="#ffe5e5">100%</text>
+
+  <!-- Pin 6: IO20 — USB D+ (reserved) -->
+  <rect x="302" y="108" width="46" height="194" fill="#343a40" stroke="#495057" stroke-width="1" rx="2"/>
+  <text x="325" y="130" text-anchor="middle" font-size="12" fill="#6c757d" font-weight="700">6</text>
+  <text x="325" y="148" text-anchor="middle" font-size="10" fill="#6c757d" font-weight="600">IO20</text>
+  <text x="325" y="165" text-anchor="middle" font-size="9" fill="#555">USB D+</text>
+  <text x="325" y="178" text-anchor="middle" font-size="8" fill="#555">reserved</text>
+
+  <!-- Pin 7: IO44 — RXD (unused) -->
+  <rect x="352" y="108" width="46" height="194" fill="#343a40" stroke="#495057" stroke-width="1" rx="2"/>
+  <text x="375" y="130" text-anchor="middle" font-size="12" fill="#6c757d" font-weight="700">7</text>
+  <text x="375" y="148" text-anchor="middle" font-size="10" fill="#6c757d" font-weight="600">IO44</text>
+  <text x="375" y="165" text-anchor="middle" font-size="9" fill="#555">RXD</text>
+
+  <!-- Pin 8: IO19 — USB D- (reserved) -->
+  <rect x="402" y="108" width="46" height="194" fill="#343a40" stroke="#495057" stroke-width="1" rx="2"/>
+  <text x="425" y="130" text-anchor="middle" font-size="12" fill="#6c757d" font-weight="700">8</text>
+  <text x="425" y="148" text-anchor="middle" font-size="10" fill="#6c757d" font-weight="600">IO19</text>
+  <text x="425" y="165" text-anchor="middle" font-size="9" fill="#555">USB D-</text>
+  <text x="425" y="178" text-anchor="middle" font-size="8" fill="#555">reserved</text>
+
+  <!-- Pin 9: IO3 — unused -->
+  <rect x="452" y="108" width="46" height="194" fill="#343a40" stroke="#495057" stroke-width="1" rx="2"/>
+  <text x="475" y="130" text-anchor="middle" font-size="12" fill="#6c757d" font-weight="700">9</text>
+  <text x="475" y="148" text-anchor="middle" font-size="10" fill="#6c757d" font-weight="600">IO3</text>
+  <text x="475" y="165" text-anchor="middle" font-size="9" fill="#555">--</text>
+
+  <!-- Pin 10: IO14 — Black 75% -->
+  <rect x="502" y="108" width="46" height="194" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="2"/>
+  <text x="525" y="130" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">10</text>
+  <text x="525" y="148" text-anchor="middle" font-size="10" fill="#fff" font-weight="600">IO14</text>
+  <text x="525" y="165" text-anchor="middle" font-size="9" fill="#ffe5e5">Black</text>
+  <text x="525" y="178" text-anchor="middle" font-size="9" fill="#ffe5e5">75%</text>
+
+  <!-- Pin 11: IO4 — Fresh 25% -->
+  <rect x="552" y="108" width="46" height="194" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="2"/>
+  <text x="575" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">11</text>
+  <text x="575" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO4</text>
+  <text x="575" y="165" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh</text>
+  <text x="575" y="178" text-anchor="middle" font-size="9" fill="#1a4a52">25%</text>
+
+  <!-- Pin 12: IO13 — Black 50% -->
+  <rect x="602" y="108" width="46" height="194" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="2"/>
+  <text x="625" y="130" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">12</text>
+  <text x="625" y="148" text-anchor="middle" font-size="10" fill="#fff" font-weight="600">IO13</text>
+  <text x="625" y="165" text-anchor="middle" font-size="9" fill="#ffe5e5">Black</text>
+  <text x="625" y="178" text-anchor="middle" font-size="9" fill="#ffe5e5">50%</text>
+
+  <!-- Pin 13: IO5 — Fresh 50% -->
+  <rect x="652" y="108" width="46" height="194" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="2"/>
+  <text x="675" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">13</text>
+  <text x="675" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO5</text>
+  <text x="675" y="165" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh</text>
+  <text x="675" y="178" text-anchor="middle" font-size="9" fill="#1a4a52">50%</text>
+
+  <!-- Pin 14: IO12 — Black 25% -->
+  <rect x="702" y="108" width="46" height="194" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="2"/>
+  <text x="725" y="130" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">14</text>
+  <text x="725" y="148" text-anchor="middle" font-size="10" fill="#fff" font-weight="600">IO12</text>
+  <text x="725" y="165" text-anchor="middle" font-size="9" fill="#ffe5e5">Black</text>
+  <text x="725" y="178" text-anchor="middle" font-size="9" fill="#ffe5e5">25%</text>
+
+  <!-- Pin 15: IO6 — Fresh 75% -->
+  <rect x="752" y="108" width="46" height="194" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="2"/>
+  <text x="775" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">15</text>
+  <text x="775" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO6</text>
+  <text x="775" y="165" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh</text>
+  <text x="775" y="178" text-anchor="middle" font-size="9" fill="#1a4a52">75%</text>
+
+  <!-- Pin 16: IO11 — Grey 100% -->
+  <rect x="802" y="108" width="46" height="194" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="2"/>
+  <text x="825" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">16</text>
+  <text x="825" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO11</text>
+  <text x="825" y="165" text-anchor="middle" font-size="9" fill="#2a3d37">Grey</text>
+  <text x="825" y="178" text-anchor="middle" font-size="9" fill="#2a3d37">100%</text>
+
+  <!-- Pin 17: IO7 — Fresh 100% -->
+  <rect x="852" y="108" width="46" height="194" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="2"/>
+  <text x="875" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">17</text>
+  <text x="875" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO7</text>
+  <text x="875" y="165" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh</text>
+  <text x="875" y="178" text-anchor="middle" font-size="9" fill="#1a4a52">100%</text>
+
+  <!-- Pin 18: IO10 — Grey 75% -->
+  <rect x="902" y="108" width="46" height="194" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="2"/>
+  <text x="925" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">18</text>
+  <text x="925" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO10</text>
+  <text x="925" y="165" text-anchor="middle" font-size="9" fill="#2a3d37">Grey</text>
+  <text x="925" y="178" text-anchor="middle" font-size="9" fill="#2a3d37">75%</text>
+
+  <!-- Pin 19: IO8 — Grey 25% -->
+  <rect x="952" y="108" width="46" height="194" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="2"/>
+  <text x="975" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">19</text>
+  <text x="975" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO8</text>
+  <text x="975" y="165" text-anchor="middle" font-size="9" fill="#2a3d37">Grey</text>
+  <text x="975" y="178" text-anchor="middle" font-size="9" fill="#2a3d37">25%</text>
+
+  <!-- Pin 20: IO9 — Grey 50% -->
+  <rect x="1002" y="108" width="46" height="194" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="2"/>
+  <text x="1025" y="130" text-anchor="middle" font-size="12" fill="#212529" font-weight="700">20</text>
+  <text x="1025" y="148" text-anchor="middle" font-size="10" fill="#212529" font-weight="600">IO9</text>
+  <text x="1025" y="165" text-anchor="middle" font-size="9" fill="#2a3d37">Grey</text>
+  <text x="1025" y="178" text-anchor="middle" font-size="9" fill="#2a3d37">50%</text>
+
+  <!-- Row origin labels below ribbon -->
+  <text x="75" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="125" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="175" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="225" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="275" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="325" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="375" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="425" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="475" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="525" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="575" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="625" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="675" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="725" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="775" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="825" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="875" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="925" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+  <text x="975" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Outer</text>
+  <text x="1025" y="324" text-anchor="middle" font-size="8" fill="#6c757d">Inner</text>
+
+  <!-- =============== GROUPED BY TANK =============== -->
+  <rect y="348" width="1100" height="3" fill="#3d7d31"/>
+  <text x="550" y="374" text-anchor="middle" font-size="14" font-weight="700" fill="#dee2e6">Wires Grouped by Tank</text>
+  <text x="550" y="390" text-anchor="middle" font-size="10" fill="#6c757d">Which ribbon cable wires to connect per tank (wire number = pin number)</text>
+
+  <!-- Fresh Water Tank -->
+  <rect x="40" y="408" width="320" height="170" fill="#343a40" stroke="#33b8cc" stroke-width="2" rx="6"/>
+  <text x="200" y="432" text-anchor="middle" font-size="13" font-weight="700" fill="#48e6fe">Fresh Water Tank</text>
+
+  <text x="60" y="458" font-size="11" fill="#adb5bd">Wire 11</text>
+  <text x="140" y="458" font-size="11" fill="#48e6fe" font-weight="600">IO4</text>
+  <text x="240" y="458" font-size="11" fill="#dee2e6">25% sensor</text>
+
+  <text x="60" y="480" font-size="11" fill="#adb5bd">Wire 13</text>
+  <text x="140" y="480" font-size="11" fill="#48e6fe" font-weight="600">IO5</text>
+  <text x="240" y="480" font-size="11" fill="#dee2e6">50% sensor</text>
+
+  <text x="60" y="502" font-size="11" fill="#adb5bd">Wire 15</text>
+  <text x="140" y="502" font-size="11" fill="#48e6fe" font-weight="600">IO6</text>
+  <text x="240" y="502" font-size="11" fill="#dee2e6">75% sensor</text>
+
+  <text x="60" y="524" font-size="11" fill="#adb5bd">Wire 17</text>
+  <text x="140" y="524" font-size="11" fill="#48e6fe" font-weight="600">IO7</text>
+  <text x="240" y="524" font-size="11" fill="#dee2e6">100% sensor</text>
+
+  <text x="60" y="558" font-size="10" fill="#6c757d">Power: Wire 1 (3.3V) + Wire 3 (GND)</text>
+
+  <!-- Grey Water Tank -->
+  <rect x="390" y="408" width="320" height="170" fill="#343a40" stroke="#6b8d83" stroke-width="2" rx="6"/>
+  <text x="550" y="432" text-anchor="middle" font-size="13" font-weight="700" fill="#83a79c">Grey Water Tank</text>
+
+  <text x="410" y="458" font-size="11" fill="#adb5bd">Wire 19</text>
+  <text x="500" y="458" font-size="11" fill="#83a79c" font-weight="600">IO8</text>
+  <text x="600" y="458" font-size="11" fill="#dee2e6">25% sensor</text>
+
+  <text x="410" y="480" font-size="11" fill="#adb5bd">Wire 20</text>
+  <text x="500" y="480" font-size="11" fill="#83a79c" font-weight="600">IO9</text>
+  <text x="600" y="480" font-size="11" fill="#dee2e6">50% sensor</text>
+
+  <text x="410" y="502" font-size="11" fill="#adb5bd">Wire 18</text>
+  <text x="500" y="502" font-size="11" fill="#83a79c" font-weight="600">IO10</text>
+  <text x="600" y="502" font-size="11" fill="#dee2e6">75% sensor</text>
+
+  <text x="410" y="524" font-size="11" fill="#adb5bd">Wire 16</text>
+  <text x="500" y="524" font-size="11" fill="#83a79c" font-weight="600">IO11</text>
+  <text x="600" y="524" font-size="11" fill="#dee2e6">100% sensor</text>
+
+  <text x="410" y="558" font-size="10" fill="#6c757d">Power: Wire 1 (3.3V) + Wire 3 (GND)</text>
+
+  <!-- Black Water Tank -->
+  <rect x="740" y="408" width="320" height="170" fill="#343a40" stroke="#cc4342" stroke-width="2" rx="6"/>
+  <text x="900" y="432" text-anchor="middle" font-size="13" font-weight="700" fill="#ff5453">Black Water Tank</text>
+
+  <text x="760" y="458" font-size="11" fill="#adb5bd">Wire 14</text>
+  <text x="850" y="458" font-size="11" fill="#ff5453" font-weight="600">IO12</text>
+  <text x="950" y="458" font-size="11" fill="#dee2e6">25% sensor</text>
+
+  <text x="760" y="480" font-size="11" fill="#adb5bd">Wire 12</text>
+  <text x="850" y="480" font-size="11" fill="#ff5453" font-weight="600">IO13</text>
+  <text x="950" y="480" font-size="11" fill="#dee2e6">50% sensor</text>
+
+  <text x="760" y="502" font-size="11" fill="#adb5bd">Wire 10</text>
+  <text x="850" y="502" font-size="11" fill="#ff5453" font-weight="600">IO14</text>
+  <text x="950" y="502" font-size="11" fill="#dee2e6">75% sensor</text>
+
+  <text x="760" y="524" font-size="11" fill="#adb5bd">Wire 5</text>
+  <text x="850" y="524" font-size="11" fill="#ff5453" font-weight="600">IO43</text>
+  <text x="950" y="524" font-size="11" fill="#dee2e6">100% sensor</text>
+
+  <text x="760" y="558" font-size="10" fill="#6c757d">Power: Wire 1 (3.3V) + Wire 3 (GND)</text>
+
+  <!-- =============== LEGEND =============== -->
+  <rect x="40" y="598" width="1020" height="60" fill="#343a40" stroke="#495057" stroke-width="1" rx="4"/>
+  <text x="70" y="620" font-size="11" font-weight="700" fill="#dee2e6">Legend:</text>
+  <rect x="130" y="608" width="14" height="14" fill="#48e6fe" rx="2"/>
+  <text x="150" y="620" font-size="10" fill="#adb5bd">Fresh Water</text>
+  <rect x="240" y="608" width="14" height="14" fill="#83a79c" rx="2"/>
+  <text x="260" y="620" font-size="10" fill="#adb5bd">Grey Water</text>
+  <rect x="340" y="608" width="14" height="14" fill="#ff5453" rx="2"/>
+  <text x="360" y="620" font-size="10" fill="#adb5bd">Black Water</text>
+  <rect x="450" y="608" width="14" height="14" fill="#343a40" stroke="#495057" stroke-width="1" rx="2"/>
+  <text x="470" y="620" font-size="10" fill="#adb5bd">Unused / Reserved</text>
+  <rect x="590" y="608" width="14" height="14" fill="#52a441" rx="2"/>
+  <text x="610" y="620" font-size="10" fill="#adb5bd">Power</text>
+  <rect x="670" y="608" width="14" height="14" fill="#c0392b" rx="2"/>
+  <text x="690" y="620" font-size="10" fill="#adb5bd">Red Stripe (Pin 1)</text>
+
+  <text x="70" y="646" font-size="10" fill="#ff5453" font-weight="600">Note:</text>
+  <text x="110" y="646" font-size="10" fill="#adb5bd">Wires 6, 7, 8, 9 (IO20, IO44, IO19, IO3) are unused — do not connect sensors to these.</text>
+  <text x="750" y="646" font-size="10" fill="#adb5bd">All sensors share 3.3V (wire 1) and GND (wire 3).</text>
+
+  <!-- Footer -->
+  <rect y="670" width="1100" height="30" fill="#343a40"/>
+  <text x="24" y="689" font-size="9" fill="#52a441" font-weight="600">TrailCurrent</text>
+  <text x="110" y="689" font-size="9" fill="#6c757d">Reservoir v1.0 — IDC 2x10 ribbon cable pinout (standard odd/even row interleave)</text>
+</svg>

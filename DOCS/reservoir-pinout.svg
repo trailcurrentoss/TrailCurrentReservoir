@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr-fresh" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#48e6fe"/>
+    </marker>
+    <marker id="arr-grey" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#83a79c"/>
+    </marker>
+    <marker id="arr-black" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ff5453"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="680" fill="#212529" rx="0"/>
+
+  <!-- Title bar -->
+  <rect width="1100" height="54" fill="#343a40"/>
+  <rect y="54" width="1100" height="3" fill="#52a441"/>
+  <text x="24" y="35" font-size="16" font-weight="700" fill="#52a441">TrailCurrent Reservoir</text>
+  <text x="260" y="35" font-size="13" fill="#adb5bd">Waveshare ESP32-S3-RS485-CAN — Tank Sensor Pin Mapping</text>
+  <text x="1076" y="35" text-anchor="end" font-size="10" fill="#6c757d">Source: main/main.c</text>
+
+  <!-- =============== BOARD (top view) =============== -->
+  <rect x="200" y="136" width="520" height="130" fill="#2a5fa5" stroke="#1a3f75" stroke-width="2" rx="6"/>
+  <text x="460" y="160" text-anchor="middle" font-size="10" fill="#8ab4f8" font-weight="600">ESP32-S3-RS485-CAN (Top View)</text>
+
+  <!-- VCC/GND power terminal (left end, top) -->
+  <rect x="200" y="140" width="50" height="28" fill="#52a441" stroke="#3d7d31" stroke-width="1.5" rx="2"/>
+  <text x="155" y="158" text-anchor="end" font-size="9" fill="#6ab85a" font-weight="600">6-36V / GND</text>
+
+  <!-- USB-C (left end, bottom) -->
+  <rect x="183" y="212" width="28" height="44" fill="#6c757d" stroke="#495057" stroke-width="1.5" rx="2"/>
+  <text x="155" y="238" text-anchor="end" font-size="10" fill="#adb5bd" font-weight="500">USB-C</text>
+
+  <!-- CAN terminal block (right end, top) -->
+  <rect x="705" y="152" width="30" height="42" fill="#52a441" stroke="#3d7d31" stroke-width="1.5" rx="2"/>
+  <text x="750" y="170" text-anchor="start" font-size="9" fill="#6ab85a" font-weight="600">CAN (H/L)</text>
+  <!-- RS485 terminal block (right end, bottom) -->
+  <rect x="705" y="204" width="30" height="42" fill="#52a441" stroke="#3d7d31" stroke-width="1.5" rx="2"/>
+  <text x="750" y="222" text-anchor="start" font-size="9" fill="#6ab85a" font-weight="600">RS485 (A/B)</text>
+
+  <!-- ESP32-S3 chip -->
+  <rect x="470" y="177" width="80" height="50" fill="#343a40" stroke="#495057" stroke-width="1" rx="2"/>
+  <text x="510" y="199" text-anchor="middle" font-size="9" fill="#6c757d">ESP32-S3</text>
+  <text x="510" y="213" text-anchor="middle" font-size="9" fill="#6c757d">WROOM</text>
+
+  <!-- =============== PIN HEADER on board =============== -->
+  <rect x="268" y="172" width="100" height="58" fill="#111" stroke="#444" stroke-width="1" rx="2"/>
+  <text x="318" y="168" text-anchor="middle" font-size="8" fill="#6c757d">2x10 Header</text>
+
+  <!-- Outer row (y=188) -->
+  <circle cx="277" cy="188" r="3.5" fill="#ff5453" stroke="#333" stroke-width="0.6"/><!-- 3V3 -->
+  <circle cx="286" cy="188" r="3.5" fill="#495057" stroke="#333" stroke-width="0.6"/><!-- GND -->
+  <circle cx="295" cy="188" r="3.5" fill="#ff5453" stroke="#a33" stroke-width="0.8"/><!-- IO43 Black100 -->
+  <circle cx="304" cy="188" r="3.5" fill="#495057" stroke="#333" stroke-width="0.6"/><!-- IO44 -->
+  <circle cx="313" cy="188" r="3.5" fill="#495057" stroke="#333" stroke-width="0.6"/><!-- IO3 -->
+  <circle cx="322" cy="188" r="3.5" fill="#48e6fe" stroke="#333" stroke-width="0.6"/><!-- IO4 -->
+  <circle cx="331" cy="188" r="3.5" fill="#48e6fe" stroke="#333" stroke-width="0.6"/><!-- IO5 -->
+  <circle cx="340" cy="188" r="3.5" fill="#48e6fe" stroke="#333" stroke-width="0.6"/><!-- IO6 -->
+  <circle cx="349" cy="188" r="3.5" fill="#48e6fe" stroke="#333" stroke-width="0.6"/><!-- IO7 -->
+  <circle cx="358" cy="188" r="3.5" fill="#83a79c" stroke="#333" stroke-width="0.6"/><!-- IO8 -->
+
+  <!-- Inner row (y=220) -->
+  <circle cx="277" cy="220" r="3.5" fill="#ff5453" stroke="#333" stroke-width="0.6"/><!-- 5V -->
+  <circle cx="286" cy="220" r="3.5" fill="#495057" stroke="#333" stroke-width="0.6"/><!-- GND -->
+  <circle cx="295" cy="220" r="3.5" fill="#495057" stroke="#333" stroke-width="0.6"/><!-- IO20 -->
+  <circle cx="304" cy="220" r="3.5" fill="#495057" stroke="#333" stroke-width="0.6"/><!-- IO19 -->
+  <circle cx="313" cy="220" r="3.5" fill="#ff5453" stroke="#a33" stroke-width="0.8"/><!-- IO14 Black75 -->
+  <circle cx="322" cy="220" r="3.5" fill="#ff5453" stroke="#a33" stroke-width="0.8"/><!-- IO13 Black50 -->
+  <circle cx="331" cy="220" r="3.5" fill="#ff5453" stroke="#a33" stroke-width="0.8"/><!-- IO12 Black25 -->
+  <circle cx="340" cy="220" r="3.5" fill="#83a79c" stroke="#333" stroke-width="0.6"/><!-- IO11 -->
+  <circle cx="349" cy="220" r="3.5" fill="#83a79c" stroke="#333" stroke-width="0.6"/><!-- IO10 -->
+  <circle cx="358" cy="220" r="3.5" fill="#83a79c" stroke="#333" stroke-width="0.6"/><!-- IO9 -->
+
+  <!-- =============== CALLOUT TAGS =============== -->
+  <!-- FRESH (Cyan/Info) — left side, above board -->
+  <rect x="30" y="72" width="140" height="24" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="4"/>
+  <text x="100" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Fresh 25%  (IO4)</text>
+
+  <rect x="30" y="100" width="140" height="24" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="4"/>
+  <text x="100" y="116" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Fresh 50%  (IO5)</text>
+
+  <rect x="30" y="128" width="140" height="24" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="4"/>
+  <text x="100" y="144" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Fresh 75%  (IO6)</text>
+
+  <rect x="30" y="156" width="140" height="24" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="4"/>
+  <text x="100" y="172" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Fresh 100% (IO7)</text>
+
+  <!-- GREY (Teal/Link) — center, below board -->
+  <rect x="195" y="300" width="140" height="24" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="4"/>
+  <text x="265" y="316" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Grey 25%   (IO8)</text>
+
+  <rect x="195" y="328" width="140" height="24" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="4"/>
+  <text x="265" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Grey 50%   (IO9)</text>
+
+  <rect x="195" y="356" width="140" height="24" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="4"/>
+  <text x="265" y="372" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Grey 75%   (IO10)</text>
+
+  <rect x="195" y="384" width="140" height="24" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="4"/>
+  <text x="265" y="400" text-anchor="middle" font-size="11" font-weight="600" fill="#212529">Grey 100% (IO11)</text>
+
+  <!-- BLACK (Danger/Red) — right side, below board -->
+  <rect x="440" y="300" width="144" height="24" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="4"/>
+  <text x="512" y="316" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Black 25%   (IO12)</text>
+
+  <rect x="440" y="328" width="144" height="24" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="4"/>
+  <text x="512" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Black 50%   (IO13)</text>
+
+  <rect x="440" y="356" width="144" height="24" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="4"/>
+  <text x="512" y="372" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Black 75%   (IO14)</text>
+
+  <rect x="440" y="384" width="144" height="24" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="4"/>
+  <text x="512" y="400" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Black 100% (IO43)</text>
+
+  <!-- =============== ELBOW CONNECTORS =============== -->
+  <!-- Fresh 25% (IO4): tag right edge x=170,y=84 → pin cx=322,cy=188 -->
+  <polyline points="170,84 215,84 215,145 322,145 322,184"
+    fill="none" stroke="#48e6fe" stroke-width="1.8" marker-end="url(#arr-fresh)"/>
+
+  <!-- Fresh 50% (IO5): tag right edge x=170,y=112 → pin cx=331,cy=188 -->
+  <polyline points="170,112 222,112 222,148 331,148 331,184"
+    fill="none" stroke="#48e6fe" stroke-width="1.8" marker-end="url(#arr-fresh)"/>
+
+  <!-- Fresh 75% (IO6): tag right edge x=170,y=140 → pin cx=340,cy=188 -->
+  <polyline points="170,140 229,140 229,151 340,151 340,184"
+    fill="none" stroke="#48e6fe" stroke-width="1.8" marker-end="url(#arr-fresh)"/>
+
+  <!-- Fresh 100% (IO7): tag right edge x=170,y=168 → pin cx=349,cy=188 -->
+  <polyline points="170,168 236,168 236,154 349,154 349,184"
+    fill="none" stroke="#48e6fe" stroke-width="1.8" marker-end="url(#arr-fresh)"/>
+
+  <!-- Grey 25% (IO8): tag top y=300 → pin cx=358,cy=188 (outer row) -->
+  <polyline points="265,300 265,283 375,283 375,188 362,188"
+    fill="none" stroke="#83a79c" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+
+  <!-- Grey 50% (IO9): tag top y=328 → pin cx=358,cy=220 (inner row) -->
+  <polyline points="265,328 265,286 381,286 381,220 362,220"
+    fill="none" stroke="#83a79c" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+
+  <!-- Grey 75% (IO10): tag top y=356 → pin cx=349,cy=220 -->
+  <polyline points="265,356 265,289 387,289 387,240 349,240 349,224"
+    fill="none" stroke="#83a79c" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+
+  <!-- Grey 100% (IO11): tag top y=384 → pin cx=340,cy=220 -->
+  <polyline points="265,384 265,292 393,292 393,246 340,246 340,224"
+    fill="none" stroke="#83a79c" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+
+  <!-- Black 25% (IO12): tag top y=300 → pin cx=331,cy=220 -->
+  <polyline points="512,300 512,283 399,283 399,252 331,252 331,224"
+    fill="none" stroke="#ff5453" stroke-width="1.8" marker-end="url(#arr-black)"/>
+
+  <!-- Black 50% (IO13): tag top y=328 → pin cx=322,cy=220 -->
+  <polyline points="512,328 512,286 405,286 405,258 322,258 322,224"
+    fill="none" stroke="#ff5453" stroke-width="1.8" marker-end="url(#arr-black)"/>
+
+  <!-- Black 75% (IO14): tag top y=356 → pin cx=313,cy=220 -->
+  <polyline points="512,356 512,289 411,289 411,264 313,264 313,224"
+    fill="none" stroke="#ff5453" stroke-width="1.8" marker-end="url(#arr-black)"/>
+
+  <!-- Black 100% (IO43): tag top y=384 → pin cx=295,cy=188 (outer row!) -->
+  <polyline points="512,384 512,292 417,292 417,270 250,270 250,188 291,188"
+    fill="none" stroke="#ff5453" stroke-width="1.8" marker-end="url(#arr-black)"/>
+
+  <!-- =============== ZOOMED PIN HEADER DETAIL =============== -->
+  <rect y="420" width="1100" height="3" fill="#3d7d31"/>
+  <text x="550" y="446" text-anchor="middle" font-size="14" font-weight="700" fill="#dee2e6">Pin Header Detail</text>
+  <text x="550" y="462" text-anchor="middle" font-size="10" fill="#6c757d">USB-C side on left</text>
+
+  <!-- Header background -->
+  <rect x="100" y="475" width="800" height="155" fill="#343a40" stroke="#495057" stroke-width="2" rx="4"/>
+
+  <!-- Row labels -->
+  <text x="85" y="510" text-anchor="end" font-size="10" fill="#6c757d" font-weight="600">Outer</text>
+  <text x="85" y="522" text-anchor="end" font-size="10" fill="#6c757d" font-weight="600">Row</text>
+  <text x="85" y="590" text-anchor="end" font-size="10" fill="#6c757d" font-weight="600">Inner</text>
+  <text x="85" y="602" text-anchor="end" font-size="10" fill="#6c757d" font-weight="600">Row</text>
+
+  <!-- Uniform grid: 10 columns, each 66px wide, 2px gap, starting at x=116 -->
+  <!-- Column centers: 149, 217, 285, 353, 421, 489, 557, 625, 693, 761 -->
+
+  <!-- Outer Row -->
+  <rect x="116" y="486" width="66" height="40" fill="#52a441" stroke="#3d7d31" stroke-width="1" rx="3"/>
+  <text x="149" y="504" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">3.3V</text>
+  <text x="149" y="518" text-anchor="middle" font-size="9" fill="#d0e2c7">Power</text>
+
+  <rect x="184" y="486" width="66" height="40" fill="#495057" stroke="#343a40" stroke-width="1" rx="3"/>
+  <text x="217" y="504" text-anchor="middle" font-size="10" fill="#dee2e6" font-weight="700">GND</text>
+  <text x="217" y="518" text-anchor="middle" font-size="9" fill="#adb5bd">Ground</text>
+
+  <rect x="252" y="486" width="66" height="40" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="3"/>
+  <text x="285" y="504" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">IO43</text>
+  <text x="285" y="518" text-anchor="middle" font-size="9" fill="#ffe5e5">Black 100%</text>
+
+  <rect x="320" y="486" width="66" height="40" fill="#495057" stroke="#343a40" stroke-width="1" rx="3"/>
+  <text x="353" y="504" text-anchor="middle" font-size="10" fill="#adb5bd" font-weight="600">IO44</text>
+  <text x="353" y="518" text-anchor="middle" font-size="9" fill="#6c757d">RXD</text>
+
+  <rect x="388" y="486" width="66" height="40" fill="#495057" stroke="#343a40" stroke-width="1" rx="3"/>
+  <text x="421" y="504" text-anchor="middle" font-size="10" fill="#adb5bd" font-weight="600">IO3</text>
+  <text x="421" y="518" text-anchor="middle" font-size="9" fill="#6c757d">--</text>
+
+  <rect x="456" y="486" width="66" height="40" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="3"/>
+  <text x="489" y="504" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO4</text>
+  <text x="489" y="518" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh 25%</text>
+
+  <rect x="524" y="486" width="66" height="40" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="3"/>
+  <text x="557" y="504" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO5</text>
+  <text x="557" y="518" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh 50%</text>
+
+  <rect x="592" y="486" width="66" height="40" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="3"/>
+  <text x="625" y="504" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO6</text>
+  <text x="625" y="518" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh 75%</text>
+
+  <rect x="660" y="486" width="66" height="40" fill="#48e6fe" stroke="#33b8cc" stroke-width="1" rx="3"/>
+  <text x="693" y="504" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO7</text>
+  <text x="693" y="518" text-anchor="middle" font-size="9" fill="#1a4a52">Fresh 100%</text>
+
+  <rect x="728" y="486" width="66" height="40" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="3"/>
+  <text x="761" y="504" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO8</text>
+  <text x="761" y="518" text-anchor="middle" font-size="9" fill="#2a3d37">Grey 25%</text>
+
+  <!-- Direction arrows -->
+  <text x="108" y="550" text-anchor="middle" font-size="18" fill="#6c757d">&#x25C0;</text>
+  <text x="108" y="563" text-anchor="middle" font-size="8" fill="#6c757d">USB-C</text>
+  <text x="892" y="550" text-anchor="middle" font-size="18" fill="#6c757d">&#x25B6;</text>
+  <text x="892" y="563" text-anchor="middle" font-size="8" fill="#6c757d">CAN Bus</text>
+
+  <!-- Inner Row (same grid) -->
+  <rect x="116" y="570" width="66" height="40" fill="#52a441" stroke="#3d7d31" stroke-width="1" rx="3"/>
+  <text x="149" y="588" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">5V</text>
+  <text x="149" y="602" text-anchor="middle" font-size="9" fill="#d0e2c7">Power</text>
+
+  <rect x="184" y="570" width="66" height="40" fill="#495057" stroke="#343a40" stroke-width="1" rx="3"/>
+  <text x="217" y="588" text-anchor="middle" font-size="10" fill="#dee2e6" font-weight="700">GND</text>
+  <text x="217" y="602" text-anchor="middle" font-size="9" fill="#adb5bd">Ground</text>
+
+  <rect x="252" y="570" width="66" height="40" fill="#495057" stroke="#343a40" stroke-width="1" rx="3"/>
+  <text x="285" y="588" text-anchor="middle" font-size="10" fill="#adb5bd" font-weight="600">IO20</text>
+  <text x="285" y="602" text-anchor="middle" font-size="9" fill="#6c757d">USB D+</text>
+
+  <rect x="320" y="570" width="66" height="40" fill="#495057" stroke="#343a40" stroke-width="1" rx="3"/>
+  <text x="353" y="588" text-anchor="middle" font-size="10" fill="#adb5bd" font-weight="600">IO19</text>
+  <text x="353" y="602" text-anchor="middle" font-size="9" fill="#6c757d">USB D-</text>
+
+  <rect x="388" y="570" width="66" height="40" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="3"/>
+  <text x="421" y="588" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">IO14</text>
+  <text x="421" y="602" text-anchor="middle" font-size="9" fill="#ffe5e5">Black 75%</text>
+
+  <rect x="456" y="570" width="66" height="40" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="3"/>
+  <text x="489" y="588" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">IO13</text>
+  <text x="489" y="602" text-anchor="middle" font-size="9" fill="#ffe5e5">Black 50%</text>
+
+  <rect x="524" y="570" width="66" height="40" fill="#ff5453" stroke="#cc4342" stroke-width="1" rx="3"/>
+  <text x="557" y="588" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">IO12</text>
+  <text x="557" y="602" text-anchor="middle" font-size="9" fill="#ffe5e5">Black 25%</text>
+
+  <rect x="592" y="570" width="66" height="40" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="3"/>
+  <text x="625" y="588" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO11</text>
+  <text x="625" y="602" text-anchor="middle" font-size="9" fill="#2a3d37">Grey 100%</text>
+
+  <rect x="660" y="570" width="66" height="40" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="3"/>
+  <text x="693" y="588" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO10</text>
+  <text x="693" y="602" text-anchor="middle" font-size="9" fill="#2a3d37">Grey 75%</text>
+
+  <rect x="728" y="570" width="66" height="40" fill="#83a79c" stroke="#6b8d83" stroke-width="1" rx="3"/>
+  <text x="761" y="588" text-anchor="middle" font-size="10" fill="#212529" font-weight="700">IO9</text>
+  <text x="761" y="602" text-anchor="middle" font-size="9" fill="#2a3d37">Grey 50%</text>
+
+  <!-- =============== LEGEND =============== -->
+  <rect x="760" y="72" width="316" height="148" fill="#343a40" stroke="#495057" stroke-width="1" rx="6"/>
+  <text x="918" y="96" text-anchor="middle" font-size="13" font-weight="700" fill="#dee2e6">Legend</text>
+
+  <rect x="780" y="108" width="16" height="16" fill="#48e6fe" rx="3"/>
+  <text x="804" y="121" font-size="11" fill="#dee2e6">Fresh Water Tank (GPIO 4, 5, 6, 7)</text>
+
+  <rect x="780" y="130" width="16" height="16" fill="#83a79c" rx="3"/>
+  <text x="804" y="143" font-size="11" fill="#dee2e6">Grey Water Tank (GPIO 8, 9, 10, 11)</text>
+
+  <rect x="780" y="152" width="16" height="16" fill="#ff5453" rx="3"/>
+  <text x="804" y="165" font-size="11" fill="#dee2e6">Black Water Tank (GPIO 12, 13, 14, 43)</text>
+
+  <rect x="780" y="174" width="16" height="16" fill="#495057" rx="3"/>
+  <text x="804" y="187" font-size="11" fill="#adb5bd">Not used / Reserved</text>
+
+  <rect x="780" y="196" width="16" height="16" fill="#52a441" rx="3"/>
+  <text x="804" y="209" font-size="11" fill="#adb5bd">Power (3.3V / 5V / GND)</text>
+
+  <!-- =============== NOTES =============== -->
+  <text x="760" y="248" font-size="11" fill="#52a441" font-weight="600">Notes</text>
+  <text x="760" y="265" font-size="10" fill="#adb5bd">Sensors powered from 3.3V (outer row, pin 1)</text>
+  <text x="760" y="280" font-size="10" fill="#adb5bd">Sensor GNDs share header GND (pin 2)</text>
+  <text x="760" y="295" font-size="10" fill="#adb5bd">Active HIGH — HIGH = water detected</text>
+  <text x="760" y="310" font-size="10" fill="#adb5bd">CAN bus via onboard transceiver (GPIO 15/16)</text>
+  <text x="760" y="325" font-size="10" fill="#ff5453">IO43 doubles as TXD — used for Black 100%</text>
+  <text x="760" y="340" font-size="10" fill="#6c757d">IO19/IO20 reserved for USB — do not use</text>
+
+  <!-- Footer -->
+  <rect y="650" width="1100" height="30" fill="#343a40"/>
+  <text x="24" y="669" font-size="9" fill="#52a441" font-weight="600">TrailCurrent</text>
+  <text x="110" y="669" font-size="9" fill="#6c757d">Reservoir v1.0 — tank_config_t pin assignments</text>
+</svg>

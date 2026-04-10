@@ -33,6 +33,8 @@ Water tank level monitoring module that reads contactless level sensors on up to
 
 ### Pin Assignments
 
+![Board Pin Mapping](DOCS/reservoir-pinout.png)
+
 | Function | GPIO | Description |
 |----------|------|-------------|
 | CAN TX | 15 | CAN bus transmit (onboard transceiver) |
@@ -48,9 +50,15 @@ Water tank level monitoring module that reads contactless level sensors on up to
 | Black 25% | 12 | Black water tank, 25% level sensor |
 | Black 50% | 13 | Black water tank, 50% level sensor |
 | Black 75% | 14 | Black water tank, 75% level sensor |
-| Black 100% | 17 | Black water tank, 100% level sensor |
+| Black 100% | 43 | Black water tank, 100% level sensor |
 
 All sensor GPIOs are configured as inputs with internal pull-down resistors.
+
+### Ribbon Cable Pinout
+
+When connecting via a 20-pin IDC ribbon cable, the red stripe aligns with pin 1 (3.3V/5V end). The sensor wires are interleaved due to standard odd/even row numbering.
+
+![Ribbon Cable Pinout](DOCS/reservoir-ribbon-cable.png)
 
 ## Firmware
 
@@ -182,6 +190,8 @@ Detailed documentation is available in the [DOCS/](DOCS/) directory:
 - [Firmware Architecture](DOCS/firmware-architecture.md) - Task structure, data flow, and timing
 - [CAN Protocol](DOCS/can-protocol.md) - Complete CAN message specification
 - [Sensor Wiring Guide](DOCS/sensor-wiring.md) - Installation, wiring, and troubleshooting
+- [Board Pin Mapping](DOCS/reservoir-pinout.svg) - GPIO-to-sensor visual pin diagram
+- [Ribbon Cable Pinout](DOCS/reservoir-ribbon-cable.svg) - 20-pin IDC ribbon cable wiring reference
 
 ## Project Structure
 
@@ -191,7 +201,11 @@ Detailed documentation is available in the [DOCS/](DOCS/) directory:
 │   │   └── high-level-requirements.md
 │   ├── firmware-architecture.md
 │   ├── can-protocol.md
-│   └── sensor-wiring.md
+│   ├── sensor-wiring.md
+│   ├── reservoir-pinout.svg          # Board pin mapping diagram
+│   ├── reservoir-pinout.png
+│   ├── reservoir-ribbon-cable.svg    # Ribbon cable wiring diagram
+│   └── reservoir-ribbon-cable.png
 ├── main/                             # ESP-IDF firmware source
 │   ├── main.c                        # Sensor polling and CAN transmitter
 │   ├── wifi_config.c                 # WiFi credential management via CAN
